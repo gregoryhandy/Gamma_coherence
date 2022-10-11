@@ -41,10 +41,6 @@ parfor jj = 1:num_conds
 end
 rates_trial_ave = rates_trial'*10^3; % convert the rates to Hz
 
-%% Save the results
-% filename = sprintf('./Data_sets/Exp_compare/EIF_LR_MF_data_contrast_light_%s',light{1});
-% save(filename,'rates_trial_ave','params','yy_time','yy_freq')
-
 %%
 color_scheme = [0.8500, 0.3250, 0.0980; 0, 0.4470, 0.7410; 0.4660, 0.6740, 0.1880;...
     0.8500, 0.3250, 0.0980; 0, 0.4470, 0.7410; 0.4660, 0.6740, 0.1880]; 

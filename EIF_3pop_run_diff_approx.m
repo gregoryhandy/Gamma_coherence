@@ -30,23 +30,18 @@ rmpath('./Cluster_code')
 mex ./Mex_Functions/EIF_mex_diff_approx_delay.c
 
 %% Save the data in this directory
-if ismac
-    data_dir = '/Users/gregoryhandy/Research_Local/EIF_Gamma_Data/';
-else
-    data_dir = '/user_data/ghandy/EIF_Gamma_Data/';
-end
+% Warning: Can be a large file!
+data_dir='./Data_sets/';
 
 %% Load the parameters
 light = {'range',0};
-surround_diff = 0;
+surround_diff = 0; % 0 (iso), 90 (cross)
 params = EIF_params_official_fn(surround_diff,1,light,'med');
 
 %% Seed the random number generator
 rng('shuffle');
 s = rng();
 random_seed = s.Seed;
-% still random, but saves the spikes in this designated spot
-% random_seed = 1002; 
 
 %% Create the connectivity matrix to be used for all simulations
 tic;

@@ -4,21 +4,10 @@
 %%
 function plot_raster_v2(times, tinds, Ntot, Npop, Ncells, pinds, plot_num )
 
-% color_scheme = [0.8500 0.3250 0.0980;
-%     0 0.4470 0.7410;
-%     0.4660 0.6740 0.1880;
-%     0.3 0.3 0.3];
-
-% color_scheme = [81,128,68;
-%     255,0,0;
-%     221,124,1;
-%     2,190,190]/255;
-
 color_scheme = [38 30 101;
     0 169 69;
     255,172,16;
     158, 14, 145]/255;
-
 %%
 
 s = [times; tinds];
@@ -53,11 +42,6 @@ for i = 1:Npop
     
     % get the neuron indices
     neuroninds=s(2,Iplot);
-    % map the neuron indices so that they lay next to each other
-%     if i > 1
-%         neuroninds = neuroninds - index_start(i) + sum(n_per_pop(1:(i-1)));
-%     end
-    %neuroninds(neuroninds>Ne/2)=neuroninds(neuroninds>Ne/2)-Ne/2+nplot/2;
     
     if ~isempty(neuroninds)
         s_raster = double(s(1,Iplot))/1000;
