@@ -3,7 +3,7 @@
 % using mean field theory for a range of contrast values for the modified
 % model where VIP is modulated by the stimulus
 %
-% Corresponds to Fig. S9 in:
+% Corresponds to Fig. S6 in:
 %   J Veit, G Handy, DP Mossing, B Doiron, H Adesnik. 
 %   Cortical VIP neurons locally control the gain but globally control 
 %   the coherence of gamma band rhythms.
